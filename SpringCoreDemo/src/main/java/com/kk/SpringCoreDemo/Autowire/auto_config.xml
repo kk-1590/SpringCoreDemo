@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- <bean class="com.kk.SpringCoreDemo.Student" name="student1" p:studentId="101" p:studentName="Kartik" p:studentAddress="Delhi" /> -->
+	<!-- <bean class="com.kk.SpringCoreDemo.Student" name="student1">
+		<property name="studentId" value="101"></property>
+		<property name="studentName" value="Kartik"></property>
+		<property name="studentAddress" value="Delhi"></property>
+	</bean> -->
+	
+	<!-- <bean class="com.kk.SpringCoreDemo.Student" name="student2">
+		<property name="studentId" value="105"></property>
+		<property name="studentName" value="Mohit"></property>
+		<property name="studentAddress" value="Rajasthan"></property>
+	</bean> -->
+	
+	<!-- <bean class="com.kk.SpringCoreDemo.Autowire.Emp" name="emp" autowire="constructor"></bean> -->
+	
+	<context:annotation-config></context:annotation-config>	
+	
+	<bean class="com.kk.SpringCoreDemo.Autowire.Emp1" name="emp1"></bean>
+	
+	<bean class="com.kk.SpringCoreDemo.Autowire.Address1" name="address1">
+		<property name="street" value="Street 123"></property>
+		<property name="city" value="Mathura"></property>
+	</bean>
+	
+	<bean class="com.kk.SpringCoreDemo.Autowire.Address1" name="address2">
+		<property name="street" value="Dalal Street"></property>
+		<property name="city" value="Agra"></property>
+	</bean>
+	
+	<!-- <bean class="com.kk.SpringCoreDemo.Autowire.Address" name="address1">
+		<property name="street" value="Street 456"></property>
+		<property name="city" value="Delhi"></property>
+	</bean> -->
+	
+	<bean class="com.kk.SpringCoreDemo.Autowire.Emp2" name="emp2">
+		<property name="name" value="Kartik"></property>
+		
+		<property name="phones">
+			<list>
+				<value>123456</value>
+				<value>456789</value>
+				<value>13579</value>
+				<value>02468</value>
+			</list>
+		</property>
+		
+		<property name="addresses">
+			<set>
+				<value>Delhi</value>
+				<value>Kanpur</value>
+				<value>Noida</value>
+				<value>Baroda</value>
+			</set>
+		</property>
+		
+		<property name="courses">
+			<map>
+				<entry key="java" value="2 months"></entry>
+				<entry key="cpp" value="3 months"></entry>
+				<entry key="c" value="1 months"></entry>
+			</map>
+		</property>
+		
+	</bean>
+</beans>
